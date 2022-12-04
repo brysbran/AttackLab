@@ -26,5 +26,13 @@ c8 1d 40 00 00 00 00 00
 -------------
 - move cookie into parameter register (rdi) and then call touch 2
 - touch2 address = 0x401e08
-- cookie address = 0x32046301 
-- need to enter touch2
+- to access touch2 use same format as touch1 of 24 0's for buffer and then address of touch2
+- upon entering touch2, can see cookie is held at address "0x406510"
+	- when called using x/32x prints
+"0x406510 <cookie>:      0x01    0x63    0x04    0x32    0x00    0x00    0x00    0x00
+0x406518:       0x00    0x00    0x00    0x00    0x00    0x00    0x00    0x00
+0x406520 <gets_buf>:    0x30    0x30    0x20    0x30    0x30    0x20    0x30    0x30
+0x406528 <gets_buf+8>:  0x20    0x30    0x30    0x20    0x30    0x30    0x20    0x30"
+- first 4 bytes are the cookie
+
+

